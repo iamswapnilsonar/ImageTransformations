@@ -1,11 +1,9 @@
 package com.vsplc.android.seekbar;
 
-import com.example.seekbar.R;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.SeekBar;
