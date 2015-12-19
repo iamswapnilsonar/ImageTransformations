@@ -11,7 +11,7 @@ public class RotateCommand {
 	private static final int FULL_ANGLE = 360;
 	
 	@SuppressWarnings("unused")
-	private static final String ID = "com.rec.photoeditor.graphics.commands.RotateCommand";
+	private static final String ID = "com.vsplc.android.seekbar.RotateCommand";
 	
 	private int angle = 0;
 
@@ -27,16 +27,16 @@ public class RotateCommand {
 	}
 
 	public String getId() {
-		return "com.rec.photoeditor.graphics.commands.RotateCommand";
+		return "com.vsplc.android.seekbar.RotateCommand";
 	}
 
-	public Bitmap process(Bitmap paramBitmap, ImageView view) {
-		
-		Log.i("Image Processing Command", "com.rec.photoeditor.graphics.commands.RotateCommand : "+ this.angle);
+	public Bitmap process(Bitmap paramBitmap) {
 		
 		Matrix localMatrix = new Matrix();
 		
 		localMatrix.postRotate(this.angle);
+		
+		Log.v("RotateCommand", "Bitmap : "+paramBitmap);
 		
 		return Bitmap.createBitmap(paramBitmap, 0, 0,
 				paramBitmap.getWidth(), paramBitmap.getHeight(), localMatrix, true);

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Drag &amp; Drop"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Add Image" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:id="@+id/ec_rltabselected"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" >
+
+            <AbsoluteLayout
+                android:id="@+id/relative1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/commonroundedcornerlayout" >
+
+                <com.vsplc.android.seekbar.ScaleImageView
+                    android:id="@+id/ivCardView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_mdl3" >
+                </com.vsplc.android.seekbar.ScaleImageView>
+            </AbsoluteLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="360" />
+
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="count" />
+    </LinearLayout>
+
+</LinearLayout>
